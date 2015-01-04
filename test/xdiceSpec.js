@@ -1,7 +1,7 @@
  var roll = require('../index');
  var expect = require('chai').expect;
 
- describe('xDice', function(){
+ describe('Dice Notation', function(){
 
     it('should exist', function() {
         expect(roll).to.be.a('function');
@@ -28,6 +28,12 @@
     });
 
     it('should be able to return array of dice results', function()  {
-        expect(roll('3D10', true)).to.be.a('array');
+        expect(roll('3D10', {type: 'array'})).to.be.a('array');
     });
+
+    // it('should be able to return the highest value', function() {
+    //
+    //     //how do you know it is the highest?
+    //     expect(roll('3D10', {type: 'highest'})).to.be.a('number');
+    // });
  });

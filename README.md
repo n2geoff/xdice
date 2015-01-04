@@ -34,7 +34,7 @@ But I want PIPS!!! Ok, simple, same as above
 
 Behind the scenes xDice gets a collection of results and returns the sum of those results, but if you want the result array you can get that too
 
-	roll('4d6', true); // [4,5,2,1]
+	roll('4d6', {type: 'array'}); // [4,5,2,1]
 
 ## Run Tests
 

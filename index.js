@@ -1,11 +1,16 @@
 //mocks RPG-style dice rolling, like roll 1d6
-module.exports = function roll(notation, asArray) {
+module.exports = function roll(notation, options) {
 
     //validate input
     if(!notation.match(/([\d]*)+[d|D]+([\d]*)/)) throw new Error('Invalid dice notation.  Expects #D# pattern.');
 
-    //return type as array of rolls?
-    asArray = asArray || false;
+    //return type options
+    options = options || {};
+
+    //sort ascending util function
+    function asc(a, b) {
+        return a > b;
+    }
 
     //n = numeric value
     var n = notation.toLowerCase().split("d");
@@ -22,8 +27,19 @@ module.exports = function roll(notation, asArray) {
         sum += collection[i];
     }
 
-    //return collection array
-    if(asArray) return collection;
+    //return as test object
+    if(options && options.debug === true) {
+
+    }
+
+    //return collection as array
+    if(options && options.type === 'array') return collection;
+
+    //return highest value in collction
+    if(options && options.type === 'highest') return collection.sort(sorted).slice(-1)[0];
+
+    //return lowest value in collection
+    if(options && options.type === 'lowest') return collection.sort(sorted).slice(0)[0];
 
     //return sum of collection
     return sum;
