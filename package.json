@@ -1,0 +1,24 @@
+{
+  "name": "xdice",
+  "version": "0.0.0",
+  "description": "Simple Dice Randomizer for Gamers",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n2geoff/xdice.git"
+  },
+  "keywords": [
+    "dice",
+    "roller",
+    "random"
+  ],
+  "author": "Geoff Doty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/n2geoff/xdice/issues"
+  },
+  "homepage": "https://github.com/n2geoff/xdice"
+}
