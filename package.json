@@ -4,7 +4,7 @@
   "description": "Simple Dice Randomizer for Gamers",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/xdiceSpec.js"
   },
   "repository": {
     "type": "git",
@@ -13,12 +13,18 @@
   "keywords": [
     "dice",
     "roller",
-    "random"
+    "random",
+    "rpg-style",
+    "dice-notation"
   ],
   "author": "Geoff Doty",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/n2geoff/xdice/issues"
   },
-  "homepage": "https://github.com/n2geoff/xdice"
+  "homepage": "https://github.com/n2geoff/xdice",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  }
 }
