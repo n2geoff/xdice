@@ -1,6 +1,6 @@
 {
   "name": "xdice",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Simple Dice Randomizer for Gamers",
   "main": "index.js",
   "scripts": {
